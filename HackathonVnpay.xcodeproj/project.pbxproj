@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FEA65C22AD9469A0022DD46 /* Dispatch in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA65BE2AD946990022DD46 /* Dispatch */; };
+		4FEA65C32AD9469A0022DD46 /* UIKit in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA65BF2AD946990022DD46 /* UIKit */; };
+		4FEA65C42AD9469A0022DD46 /* Shared in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA65C02AD9469A0022DD46 /* Shared */; };
+		4FEA65C52AD9469A0022DD46 /* CoreAnimation in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA65C12AD9469A0022DD46 /* CoreAnimation */; };
+		4FEA65C82AD946B60022DD46 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA65C72AD946B60022DD46 /* SwiftyJSON.swift */; };
 		9AD25D6E2AD84A4F00AE6199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD25D6D2AD84A4F00AE6199 /* AppDelegate.swift */; };
 		9AD25D702AD84A4F00AE6199 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD25D6F2AD84A4F00AE6199 /* SceneDelegate.swift */; };
 		9AD25D722AD84A4F00AE6199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD25D712AD84A4F00AE6199 /* ViewController.swift */; };
 		9AD25D752AD84A4F00AE6199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD25D732AD84A4F00AE6199 /* Main.storyboard */; };
 		9AD25D772AD84A5100AE6199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD25D762AD84A5100AE6199 /* Assets.xcassets */; };
 		9AD25D7A2AD84A5100AE6199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD25D782AD84A5100AE6199 /* LaunchScreen.storyboard */; };
-		9AD25D852AD84A5100AE6199 /* HackathonVnpayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD25D842AD84A5100AE6199 /* HackathonVnpayTests.swift */; };
-		9AD25D8F2AD84A5100AE6199 /* HackathonVnpayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD25D8E2AD84A5100AE6199 /* HackathonVnpayUITests.swift */; };
-		9AD25D912AD84A5100AE6199 /* HackathonVnpayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD25D902AD84A5100AE6199 /* HackathonVnpayUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4FEA65BE2AD946990022DD46 /* Dispatch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Dispatch; sourceTree = "<group>"; };
+		4FEA65BF2AD946990022DD46 /* UIKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UIKit; sourceTree = "<group>"; };
+		4FEA65C02AD9469A0022DD46 /* Shared */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shared; sourceTree = "<group>"; };
+		4FEA65C12AD9469A0022DD46 /* CoreAnimation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CoreAnimation; sourceTree = "<group>"; };
+		4FEA65C72AD946B60022DD46 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9AD25D6A2AD84A4F00AE6199 /* HackathonVnpay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonVnpay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD25D6D2AD84A4F00AE6199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AD25D6F2AD84A4F00AE6199 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,10 +52,7 @@
 		9AD25D792AD84A5100AE6199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AD25D7B2AD84A5100AE6199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD25D802AD84A5100AE6199 /* HackathonVnpayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackathonVnpayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AD25D842AD84A5100AE6199 /* HackathonVnpayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonVnpayTests.swift; sourceTree = "<group>"; };
 		9AD25D8A2AD84A5100AE6199 /* HackathonVnpayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackathonVnpayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AD25D8E2AD84A5100AE6199 /* HackathonVnpayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonVnpayUITests.swift; sourceTree = "<group>"; };
-		9AD25D902AD84A5100AE6199 /* HackathonVnpayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonVnpayUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +80,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FEA65BD2AD946740022DD46 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				4FEA65C62AD946A90022DD46 /* SwiftyJSON */,
+				4FEA65C12AD9469A0022DD46 /* CoreAnimation */,
+				4FEA65BE2AD946990022DD46 /* Dispatch */,
+				4FEA65C02AD9469A0022DD46 /* Shared */,
+				4FEA65BF2AD946990022DD46 /* UIKit */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		4FEA65C62AD946A90022DD46 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				4FEA65C72AD946B60022DD46 /* SwiftyJSON.swift */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
 		9AD25D612AD84A4F00AE6199 = {
 			isa = PBXGroup;
 			children = (
 				9AD25D6C2AD84A4F00AE6199 /* HackathonVnpay */,
-				9AD25D832AD84A5100AE6199 /* HackathonVnpayTests */,
-				9AD25D8D2AD84A5100AE6199 /* HackathonVnpayUITests */,
 				9AD25D6B2AD84A4F00AE6199 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +121,7 @@
 		9AD25D6C2AD84A4F00AE6199 /* HackathonVnpay */ = {
 			isa = PBXGroup;
 			children = (
+				4FEA65BD2AD946740022DD46 /* Extention */,
 				9AD25D6D2AD84A4F00AE6199 /* AppDelegate.swift */,
 				9AD25D6F2AD84A4F00AE6199 /* SceneDelegate.swift */,
 				9AD25D712AD84A4F00AE6199 /* ViewController.swift */,
@@ -108,23 +131,6 @@
 				9AD25D7B2AD84A5100AE6199 /* Info.plist */,
 			);
 			path = HackathonVnpay;
-			sourceTree = "<group>";
-		};
-		9AD25D832AD84A5100AE6199 /* HackathonVnpayTests */ = {
-			isa = PBXGroup;
-			children = (
-				9AD25D842AD84A5100AE6199 /* HackathonVnpayTests.swift */,
-			);
-			path = HackathonVnpayTests;
-			sourceTree = "<group>";
-		};
-		9AD25D8D2AD84A5100AE6199 /* HackathonVnpayUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9AD25D8E2AD84A5100AE6199 /* HackathonVnpayUITests.swift */,
-				9AD25D902AD84A5100AE6199 /* HackathonVnpayUITestsLaunchTests.swift */,
-			);
-			path = HackathonVnpayUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +237,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FEA65C32AD9469A0022DD46 /* UIKit in Resources */,
+				4FEA65C22AD9469A0022DD46 /* Dispatch in Resources */,
 				9AD25D7A2AD84A5100AE6199 /* LaunchScreen.storyboard in Resources */,
 				9AD25D772AD84A5100AE6199 /* Assets.xcassets in Resources */,
 				9AD25D752AD84A4F00AE6199 /* Main.storyboard in Resources */,
+				4FEA65C42AD9469A0022DD46 /* Shared in Resources */,
+				4FEA65C52AD9469A0022DD46 /* CoreAnimation in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +271,7 @@
 				9AD25D722AD84A4F00AE6199 /* ViewController.swift in Sources */,
 				9AD25D6E2AD84A4F00AE6199 /* AppDelegate.swift in Sources */,
 				9AD25D702AD84A4F00AE6199 /* SceneDelegate.swift in Sources */,
+				4FEA65C82AD946B60022DD46 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AD25D852AD84A5100AE6199 /* HackathonVnpayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +286,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AD25D8F2AD84A5100AE6199 /* HackathonVnpayUITests.swift in Sources */,
-				9AD25D912AD84A5100AE6199 /* HackathonVnpayUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
