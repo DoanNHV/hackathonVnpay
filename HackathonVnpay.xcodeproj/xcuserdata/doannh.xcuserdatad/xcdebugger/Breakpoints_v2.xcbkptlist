@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5C98B265-E047-427B-9120-4B5DA197E1EE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "21A5FF10-20F4-4ABB-9741-9F8ADF95F499"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackathonVnpay/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "21A5FF10-20F4-4ABB-9741-9F8ADF95F499 - ca8adbc95155ab06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackathonVnpay.ViewController.loadImagesFromPhotoLibrary() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "352">
+               </Location>
+               <Location
+                  uuid = "21A5FF10-20F4-4ABB-9741-9F8ADF95F499 - 400f6a2cd9ad8fe2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackathonVnpay.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51950714-A975-4DD8-B9D2-30CA175BD725"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackathonVnpay/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "checkPhotoLibraryAuthorization()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BE3BD29-8B74-4837-8E1E-0E46821818AF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackathonVnpay/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "checkPhotoLibraryAuthorization()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9BE3BD29-8B74-4837-8E1E-0E46821818AF - ca8adbc95155aa5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackathonVnpay.ViewController.loadImagesFromPhotoLibrary() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "916">
+               </Location>
+               <Location
+                  uuid = "9BE3BD29-8B74-4837-8E1E-0E46821818AF - 8151c9b79c5240a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;) -&gt; () in HackathonVnpay.ViewController.loadImagesFromPhotoLibrary() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "9BE3BD29-8B74-4837-8E1E-0E46821818AF - f122c4fb9ba46af4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackathonVnpay.ViewController.checkPhotoLibraryAuthorization() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98D7B4BD-81F5-4AB8-A9CB-22D6D1BAF236"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackathonVnpay/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "checkPhotoLibraryAuthorization()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "98D7B4BD-81F5-4AB8-A9CB-22D6D1BAF236 - ca8adbc95155aa5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackathonVnpay.ViewController.loadImagesFromPhotoLibrary() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "864">
+               </Location>
+               <Location
+                  uuid = "98D7B4BD-81F5-4AB8-A9CB-22D6D1BAF236 - 8151c9b79c5240a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;) -&gt; () in HackathonVnpay.ViewController.loadImagesFromPhotoLibrary() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6254A77A-6D48-47F8-85E8-B52891E13180"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackathonVnpay/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "checkPhotoLibraryAuthorization()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6254A77A-6D48-47F8-85E8-B52891E13180 - 8151c9b79c5241f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;) -&gt; () in HackathonVnpay.ViewController.loadImagesFromPhotoLibrary() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "6254A77A-6D48-47F8-85E8-B52891E13180 - 8151c9b79c5241f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;) -&gt; () in HackathonVnpay.ViewController.loadImagesFromPhotoLibrary() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DD236278-36E4-4CC9-9460-207357901481"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackathonVnpay/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "checkPhotoLibraryAuthorization()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62A5C039-1E37-46FC-BD4D-07AD001F4DAB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackathonVnpay/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "checkPhotoLibraryAuthorization()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F95D1CF5-60AF-479B-97C3-381BA1C6299B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F95D1CF5-60AF-479B-97C3-381BA1C6299B - 3896fafe5e3a6cef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackathonVnpay.OptionAddPhotoPopup.viewDidLoad() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "1100">
+               </Location>
+               <Location
+                  uuid = "F95D1CF5-60AF-479B-97C3-381BA1C6299B - 3896fafe5e3a6cef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackathonVnpay.OptionAddPhotoPopup.viewDidLoad() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "1308">
+               </Location>
+               <Location
+                  uuid = "F95D1CF5-60AF-479B-97C3-381BA1C6299B - 3896fafe5e3a6cc0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackathonVnpay.OptionAddPhotoPopup.viewDidLoad() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "1172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3CEEF07F-EA67-49D9-BC75-1E1F94C1CF0E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3CEEF07F-EA67-49D9-BC75-1E1F94C1CF0E - 3896fafe5e3a6d63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackathonVnpay.OptionAddPhotoPopup.viewDidLoad() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  uuid = "3CEEF07F-EA67-49D9-BC75-1E1F94C1CF0E - 3896fafe5e3a6d63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackathonVnpay.OptionAddPhotoPopup.viewDidLoad() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "476">
+               </Location>
+               <Location
+                  uuid = "3CEEF07F-EA67-49D9-BC75-1E1F94C1CF0E - 3896fafe5e3a6d44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackathonVnpay.OptionAddPhotoPopup.viewDidLoad() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "340">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF139455-69F2-45E3-95A5-17FE4CCCD276"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "OptionAddPhotoPopup"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
