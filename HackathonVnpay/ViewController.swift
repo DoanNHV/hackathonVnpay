@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     }
     
     private func fetchAllPhotos() {
-        let vc = OptionAddPhotoPopup()
+        let vc = ListImageAlbums()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

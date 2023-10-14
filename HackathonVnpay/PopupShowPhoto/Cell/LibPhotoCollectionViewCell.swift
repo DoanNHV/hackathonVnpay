@@ -21,7 +21,6 @@ class LibPhotoCollectionViewCell: UICollectionViewCell {
     }
     
     func setImage(image: UIImage, isCheck: Bool, count: Int) {
-       
         imageView.image = image
         if isCheck {
             countLabel.text = String(count)

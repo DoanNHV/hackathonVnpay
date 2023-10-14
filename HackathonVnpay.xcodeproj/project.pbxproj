@@ -15,10 +15,10 @@
 		4F21D2FB2ADA46D5006D4517 /* ImageViewSmallCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F21D2F92ADA46D5006D4517 /* ImageViewSmallCollectionViewCell.xib */; };
 		9A4B17772ADA3FE20018D142 /* LibPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4B17712ADA3FE20018D142 /* LibPhotoCollectionViewCell.xib */; };
 		9A4B17782ADA3FE20018D142 /* LibPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B17722ADA3FE20018D142 /* LibPhotoCollectionViewCell.swift */; };
-		9A4B17792ADA3FE20018D142 /* OptionAddPhotoPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4B17732ADA3FE20018D142 /* OptionAddPhotoPopup.xib */; };
-		9A4B177A2ADA3FE20018D142 /* OptionAddPhotoPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B17742ADA3FE20018D142 /* OptionAddPhotoPopup.swift */; };
 		9A4B177F2ADA5C750018D142 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B177D2ADA5C740018D142 /* UIColor + Extension.swift */; };
 		9A4B17802ADA5C750018D142 /* TableView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B177E2ADA5C740018D142 /* TableView + Extension.swift */; };
+		9A4D4BF82ADA7AB8001B78A3 /* ListImageAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4D4BF62ADA7AB8001B78A3 /* ListImageAlbums.swift */; };
+		9A4D4BF92ADA7AB8001B78A3 /* ListImageAlbums.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4D4BF72ADA7AB8001B78A3 /* ListImageAlbums.xib */; };
 		9AD25D6E2AD84A4F00AE6199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD25D6D2AD84A4F00AE6199 /* AppDelegate.swift */; };
 		9AD25D702AD84A4F00AE6199 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD25D6F2AD84A4F00AE6199 /* SceneDelegate.swift */; };
 		9AD25D722AD84A4F00AE6199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD25D712AD84A4F00AE6199 /* ViewController.swift */; };
@@ -36,10 +36,10 @@
 		4F21D2F92ADA46D5006D4517 /* ImageViewSmallCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewSmallCollectionViewCell.xib; sourceTree = "<group>"; };
 		9A4B17712ADA3FE20018D142 /* LibPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		9A4B17722ADA3FE20018D142 /* LibPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		9A4B17732ADA3FE20018D142 /* OptionAddPhotoPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionAddPhotoPopup.xib; sourceTree = "<group>"; };
-		9A4B17742ADA3FE20018D142 /* OptionAddPhotoPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionAddPhotoPopup.swift; sourceTree = "<group>"; };
 		9A4B177D2ADA5C740018D142 /* UIColor + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		9A4B177E2ADA5C740018D142 /* TableView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView + Extension.swift"; sourceTree = "<group>"; };
+		9A4D4BF62ADA7AB8001B78A3 /* ListImageAlbums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListImageAlbums.swift; sourceTree = "<group>"; };
+		9A4D4BF72ADA7AB8001B78A3 /* ListImageAlbums.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListImageAlbums.xib; sourceTree = "<group>"; };
 		9AD25D6A2AD84A4F00AE6199 /* HackathonVnpay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonVnpay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD25D6D2AD84A4F00AE6199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AD25D6F2AD84A4F00AE6199 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,10 +85,9 @@
 		9A4B17702ADA3FE20018D142 /* PopupShowPhoto */ = {
 			isa = PBXGroup;
 			children = (
-				9A4B17712ADA3FE20018D142 /* LibPhotoCollectionViewCell.xib */,
-				9A4B17722ADA3FE20018D142 /* LibPhotoCollectionViewCell.swift */,
-				9A4B17732ADA3FE20018D142 /* OptionAddPhotoPopup.xib */,
-				9A4B17742ADA3FE20018D142 /* OptionAddPhotoPopup.swift */,
+				9A4D4BF62ADA7AB8001B78A3 /* ListImageAlbums.swift */,
+				9A4D4BF72ADA7AB8001B78A3 /* ListImageAlbums.xib */,
+				9A4D4BF52ADA7551001B78A3 /* Cell */,
 			);
 			path = PopupShowPhoto;
 			sourceTree = "<group>";
@@ -107,6 +106,15 @@
 				9A4B177E2ADA5C740018D142 /* TableView + Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		9A4D4BF52ADA7551001B78A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9A4B17712ADA3FE20018D142 /* LibPhotoCollectionViewCell.xib */,
+				9A4B17722ADA3FE20018D142 /* LibPhotoCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		9AD25D612AD84A4F00AE6199 = {
@@ -201,7 +209,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A4B17792ADA3FE20018D142 /* OptionAddPhotoPopup.xib in Resources */,
 				9AD25D7A2AD84A5100AE6199 /* LaunchScreen.storyboard in Resources */,
 				9AD25D772AD84A5100AE6199 /* Assets.xcassets in Resources */,
 				9AD25D752AD84A4F00AE6199 /* Main.storyboard in Resources */,
@@ -210,6 +217,7 @@
 				9AD25D7A2AD84A5100AE6199 /* LaunchScreen.storyboard in Resources */,
 				9AD25D772AD84A5100AE6199 /* Assets.xcassets in Resources */,
 				9AD25D752AD84A4F00AE6199 /* Main.storyboard in Resources */,
+				9A4D4BF92ADA7AB8001B78A3 /* ListImageAlbums.xib in Resources */,
 				4F21D2F72ADA3AE8006D4517 /* ImageViewLargeCollectionViewCell.xib in Resources */,
 				4F21D2F32ADA3A3A006D4517 /* DetailImageViewController.xib in Resources */,
 			);
@@ -222,9 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A4B177A2ADA3FE20018D142 /* OptionAddPhotoPopup.swift in Sources */,
 				4F21D2F62ADA3AE8006D4517 /* ImageViewLargeCollectionViewCell.swift in Sources */,
 				9A4B17802ADA5C750018D142 /* TableView + Extension.swift in Sources */,
+				9A4D4BF82ADA7AB8001B78A3 /* ListImageAlbums.swift in Sources */,
 				9AD25D722AD84A4F00AE6199 /* ViewController.swift in Sources */,
 				9AD25D6E2AD84A4F00AE6199 /* AppDelegate.swift in Sources */,
 				9A4B17782ADA3FE20018D142 /* LibPhotoCollectionViewCell.swift in Sources */,

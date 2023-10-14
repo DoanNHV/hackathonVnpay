@@ -24,8 +24,8 @@ class ImageViewSmallCollectionViewCell: UICollectionViewCell {
         selectedView.layer.cornerRadius = 8
         selectedView.layer.borderColor = UIColor.white.cgColor
         selectedView.layer.borderWidth = 2
-        // Initialization code
     }
+    
     func bindingImage(_ image: UIImage){
         imageView.image = image
     }
