@@ -18,6 +18,15 @@ class OptionAddPhotoPopup: UIViewController {
     private var itemCount = 0
     private var indexPathToCount: [IndexPath: Int] = [:]
     private var count = 0
+    private var isSelectedAll = false {
+        didSet {
+            if !isSelectedAll {
+                navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "select"), style: .plain, target: self, action: #selector(didTapTrashIcon))
+            } else {
+                navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "close"), style: .plain, target: self, action: #selector(didTapUncheck))
+            }
+        }
+    }
 
     @IBOutlet weak var viewButtonSend: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -50,6 +59,8 @@ class OptionAddPhotoPopup: UIViewController {
         collectionView.dataSource = self
         collectionView.registerCell(LibPhotoCollectionViewCell.self)
 
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "select"), style: .plain, target: self, action: #selector(didTapTrashIcon))
+
         allPhotos.enumerateObjects { [weak self] asset, _, _ in
             self?.assetArray.append(.init(phaset: asset))
         }
@@ -76,6 +87,31 @@ class OptionAddPhotoPopup: UIViewController {
 
     func getListImageSelected() -> [PhotoLocal] {
         return assetArray.filter { $0.isSelected == true }
+    }
+
+    @objc func didTapTrashIcon() {
+        isSelectedAll.toggle()
+        assetArray.removeAll()
+        allPhotos.enumerateObjects { [weak self] asset, _, _ in
+            self?.assetArray.append(.init(phaset: asset, isSelected: true))
+        }
+
+        for i in 0 ..< assetArray.count {
+            let indexPath = IndexPath(row: i, section: 0)
+            indexPathToCount[indexPath] = i
+        }
+
+        collectionView.reloadData()
+    }
+
+    @objc func didTapUncheck() {
+        isSelectedAll.toggle()
+        assetArray.removeAll()
+        allPhotos.enumerateObjects { [weak self] asset, _, _ in
+            self?.assetArray.append(.init(phaset: asset, isSelected: false))
+        }
+
+        collectionView.reloadData()
     }
 }
 
