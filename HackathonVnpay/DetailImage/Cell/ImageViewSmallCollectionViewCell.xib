@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cq-jf-DBx">
-                        <rect key="frame" x="4" y="0.0" width="143" height="183"/>
+                        <rect key="frame" x="0.0" y="0.0" width="151" height="183"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageTest" translatesAutoresizingMaskIntoConstraints="NO" id="Zql-MR-gdT">
-                                <rect key="frame" x="0.0" y="0.0" width="143" height="183"/>
+                                <rect key="frame" x="0.0" y="0.0" width="151" height="183"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
@@ -56,10 +56,10 @@
                 <constraint firstItem="5cq-jf-DBx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="IQq-WG-1QG"/>
                 <constraint firstAttribute="bottom" secondItem="5cq-jf-DBx" secondAttribute="bottom" id="MCM-eK-0Qt"/>
                 <constraint firstItem="0XI-rd-f6d" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Rfw-7g-B4E"/>
-                <constraint firstItem="5cq-jf-DBx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="Zmc-i5-vmv"/>
+                <constraint firstItem="5cq-jf-DBx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Zmc-i5-vmv"/>
                 <constraint firstAttribute="trailing" secondItem="0XI-rd-f6d" secondAttribute="trailing" id="nb4-tq-K1N"/>
                 <constraint firstAttribute="bottom" secondItem="0XI-rd-f6d" secondAttribute="bottom" id="sEb-fV-YQh"/>
-                <constraint firstAttribute="trailing" secondItem="5cq-jf-DBx" secondAttribute="trailing" constant="4" id="xCF-dX-0ed"/>
+                <constraint firstAttribute="trailing" secondItem="5cq-jf-DBx" secondAttribute="trailing" id="xCF-dX-0ed"/>
             </constraints>
             <size key="customSize" width="151" height="183"/>
             <userDefinedRuntimeAttributes>
