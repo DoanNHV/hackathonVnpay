@@ -98,7 +98,7 @@ class OptionAddPhotoPopup: UIViewController {
 
         for i in 0 ..< assetArray.count {
             let indexPath = IndexPath(row: i, section: 0)
-            indexPathToCount[indexPath] = i
+            indexPathToCount[indexPath] = i + 1
         }
 
         collectionView.reloadData()
