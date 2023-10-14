@@ -16,7 +16,12 @@ class OptionAddPhotoPopup: UIViewController {
     private var assetArray: [PhotoLocal] = []
     var listImagePhoto: [Photo] = []
     var listImageCommon: [Photo] = []
+    private var listIndexPathSelected = [IndexPath]()
+    private var listIndexPathReload = [IndexPath]()
     private let imageManager = PHCachingImageManager()
+    private var itemCount = 0
+
+    var count = 0
 
     @IBOutlet weak var collectionView: UICollectionView!
     private lazy var assetOption: PHFetchOptions = {
@@ -24,7 +29,7 @@ class OptionAddPhotoPopup: UIViewController {
         allPhotosOptions.includeHiddenAssets = false
         allPhotosOptions.includeAllBurstAssets = false
         allPhotosOptions.predicate = NSPredicate(format: "mediaType = %d", PHAssetMediaType.image.rawValue)
-        allPhotosOptions.includeAssetSourceTypes =  [.typeCloudShared, .typeUserLibrary, .typeiTunesSynced]
+        allPhotosOptions.includeAssetSourceTypes = [.typeCloudShared, .typeUserLibrary, .typeiTunesSynced]
         allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         return allPhotosOptions
     }()
@@ -83,7 +88,7 @@ extension OptionAddPhotoPopup: UICollectionViewDelegate, UICollectionViewDataSou
         cell.representedAssetIdentifier = asset.phaset.localIdentifier
         imageManager.requestImage(for: asset.phaset, targetSize: CGSize(width: 360, height: 360), contentMode: .aspectFill, options: imageOption, resultHandler: { [weak cell] image, _ in
             if cell?.representedAssetIdentifier == asset.phaset.localIdentifier {
-                cell?.setImage(image: image ?? UIImage(), isCheck: asset.isSelected)
+                cell?.setImage(image: image ?? UIImage(), isCheck: asset.isSelected, count: self.itemCount)
             }
         })
         return cell
@@ -108,15 +113,23 @@ extension OptionAddPhotoPopup: UICollectionViewDelegate, UICollectionViewDataSou
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = DetailImageViewController()
-        vc.listImage = [assetArray[indexPath.row]]
-        self.navigationController?.pushViewController(vc, animated: true)
-        return
         if listImageSelected.contains(where: { poo in
             poo.phaset == assetArray[indexPath.row].phaset
         }) {}
         assetArray[indexPath.row].isSelected.toggle()
-
+        if assetArray[indexPath.row].isSelected {
+            listIndexPathSelected.append(indexPath)
+            itemCount = listIndexPathSelected.count
+        } else {
+            if let index = listIndexPathSelected.firstIndex(of: indexPath) {
+                listIndexPathReload = Array(listIndexPathSelected[index...])
+                listIndexPathSelected.remove(at: index)
+                for indexPath in listIndexPathSelected {
+                    itemCount -= 1
+                    collectionView.reloadItems(at: [indexPath])
+                }
+            }
+        }
         collectionView.reloadItems(at: [indexPath])
     }
 }
