@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImageViewSmallCollectionViewCell" customModule="HackathonVnpay" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="151" height="183"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="151" height="183"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0XI-rd-f6d">
+                        <rect key="frame" x="0.0" y="0.0" width="151" height="183"/>
+                        <color key="backgroundColor" red="0.24046009230000001" green="0.65094435910000004" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cq-jf-DBx">
+                        <rect key="frame" x="4" y="0.0" width="143" height="183"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageTest" translatesAutoresizingMaskIntoConstraints="NO" id="Zql-MR-gdT">
+                                <rect key="frame" x="4" y="2" width="135" height="179"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zql-MR-gdT" firstAttribute="leading" secondItem="5cq-jf-DBx" secondAttribute="leading" constant="4" id="Dqz-kZ-Qsb"/>
+                            <constraint firstItem="Zql-MR-gdT" firstAttribute="top" secondItem="5cq-jf-DBx" secondAttribute="top" constant="2" id="Q7a-SX-OGO"/>
+                            <constraint firstAttribute="trailing" secondItem="Zql-MR-gdT" secondAttribute="trailing" constant="4" id="eOL-eT-TMa"/>
+                            <constraint firstAttribute="bottom" secondItem="Zql-MR-gdT" secondAttribute="bottom" constant="2" id="z0q-PU-ahO"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="0XI-rd-f6d" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AuN-w7-wuV"/>
+                <constraint firstItem="5cq-jf-DBx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="IQq-WG-1QG"/>
+                <constraint firstAttribute="bottom" secondItem="5cq-jf-DBx" secondAttribute="bottom" id="MCM-eK-0Qt"/>
+                <constraint firstItem="0XI-rd-f6d" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Rfw-7g-B4E"/>
+                <constraint firstItem="5cq-jf-DBx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="Zmc-i5-vmv"/>
+                <constraint firstAttribute="trailing" secondItem="0XI-rd-f6d" secondAttribute="trailing" id="nb4-tq-K1N"/>
+                <constraint firstAttribute="bottom" secondItem="0XI-rd-f6d" secondAttribute="bottom" id="sEb-fV-YQh"/>
+                <constraint firstAttribute="trailing" secondItem="5cq-jf-DBx" secondAttribute="trailing" constant="4" id="xCF-dX-0ed"/>
+            </constraints>
+            <size key="customSize" width="151" height="183"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                    <real key="value" value="16"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="contentBgView" destination="5cq-jf-DBx" id="Ypm-NZ-Sjz"/>
+                <outlet property="imageView" destination="Zql-MR-gdT" id="iBK-I2-qaM"/>
+                <outlet property="selectedView" destination="0XI-rd-f6d" id="O9R-YY-uoG"/>
+            </connections>
+            <point key="canvasLocation" x="77.099236641221367" y="66.549295774647888"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ImageTest" width="822" height="1546"/>
+    </resources>
+</document>

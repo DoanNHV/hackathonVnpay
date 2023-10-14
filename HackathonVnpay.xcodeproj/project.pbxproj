@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F21D2F22ADA3A3A006D4517 /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F21D2F02ADA3A3A006D4517 /* DetailImageViewController.swift */; };
+		4F21D2F32ADA3A3A006D4517 /* DetailImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F21D2F12ADA3A3A006D4517 /* DetailImageViewController.xib */; };
+		4F21D2F62ADA3AE8006D4517 /* ImageViewLargeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F21D2F42ADA3AE8006D4517 /* ImageViewLargeCollectionViewCell.swift */; };
+		4F21D2F72ADA3AE8006D4517 /* ImageViewLargeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F21D2F52ADA3AE8006D4517 /* ImageViewLargeCollectionViewCell.xib */; };
+		4F21D2FA2ADA46D5006D4517 /* ImageViewSmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F21D2F82ADA46D5006D4517 /* ImageViewSmallCollectionViewCell.swift */; };
+		4F21D2FB2ADA46D5006D4517 /* ImageViewSmallCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F21D2F92ADA46D5006D4517 /* ImageViewSmallCollectionViewCell.xib */; };
 		4FEA65C22AD9469A0022DD46 /* Dispatch in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA65BE2AD946990022DD46 /* Dispatch */; };
-		4FEA65C32AD9469A0022DD46 /* UIKit in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA65BF2AD946990022DD46 /* UIKit */; };
 		4FEA65C42AD9469A0022DD46 /* Shared in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA65C02AD9469A0022DD46 /* Shared */; };
-		4FEA65C52AD9469A0022DD46 /* CoreAnimation in Resources */ = {isa = PBXBuildFile; fileRef = 4FEA65C12AD9469A0022DD46 /* CoreAnimation */; };
 		4FEA65C82AD946B60022DD46 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA65C72AD946B60022DD46 /* SwiftyJSON.swift */; };
 		9AD25D6E2AD84A4F00AE6199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD25D6D2AD84A4F00AE6199 /* AppDelegate.swift */; };
 		9AD25D702AD84A4F00AE6199 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD25D6F2AD84A4F00AE6199 /* SceneDelegate.swift */; };
@@ -20,28 +24,15 @@
 		9AD25D7A2AD84A5100AE6199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD25D782AD84A5100AE6199 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		9AD25D812AD84A5100AE6199 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AD25D622AD84A4F00AE6199 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AD25D692AD84A4F00AE6199;
-			remoteInfo = HackathonVnpay;
-		};
-		9AD25D8B2AD84A5100AE6199 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AD25D622AD84A4F00AE6199 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AD25D692AD84A4F00AE6199;
-			remoteInfo = HackathonVnpay;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		4F21D2F02ADA3A3A006D4517 /* DetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
+		4F21D2F12ADA3A3A006D4517 /* DetailImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailImageViewController.xib; sourceTree = "<group>"; };
+		4F21D2F42ADA3AE8006D4517 /* ImageViewLargeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewLargeCollectionViewCell.swift; sourceTree = "<group>"; };
+		4F21D2F52ADA3AE8006D4517 /* ImageViewLargeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewLargeCollectionViewCell.xib; sourceTree = "<group>"; };
+		4F21D2F82ADA46D5006D4517 /* ImageViewSmallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewSmallCollectionViewCell.swift; sourceTree = "<group>"; };
+		4F21D2F92ADA46D5006D4517 /* ImageViewSmallCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewSmallCollectionViewCell.xib; sourceTree = "<group>"; };
 		4FEA65BE2AD946990022DD46 /* Dispatch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Dispatch; sourceTree = "<group>"; };
-		4FEA65BF2AD946990022DD46 /* UIKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UIKit; sourceTree = "<group>"; };
 		4FEA65C02AD9469A0022DD46 /* Shared */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shared; sourceTree = "<group>"; };
-		4FEA65C12AD9469A0022DD46 /* CoreAnimation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CoreAnimation; sourceTree = "<group>"; };
 		4FEA65C72AD946B60022DD46 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9AD25D6A2AD84A4F00AE6199 /* HackathonVnpay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonVnpay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD25D6D2AD84A4F00AE6199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,8 +42,6 @@
 		9AD25D762AD84A5100AE6199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AD25D792AD84A5100AE6199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AD25D7B2AD84A5100AE6199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AD25D802AD84A5100AE6199 /* HackathonVnpayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackathonVnpayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AD25D8A2AD84A5100AE6199 /* HackathonVnpayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackathonVnpayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,31 +52,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AD25D7D2AD84A5100AE6199 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9AD25D872AD84A5100AE6199 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F21D2FC2ADA5AC9006D4517 /* DetailImage */ = {
+			isa = PBXGroup;
+			children = (
+				4F21D2FD2ADA5ADB006D4517 /* Cell */,
+				4F21D2F02ADA3A3A006D4517 /* DetailImageViewController.swift */,
+				4F21D2F12ADA3A3A006D4517 /* DetailImageViewController.xib */,
+			);
+			path = DetailImage;
+			sourceTree = "<group>";
+		};
+		4F21D2FD2ADA5ADB006D4517 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4F21D2F42ADA3AE8006D4517 /* ImageViewLargeCollectionViewCell.swift */,
+				4F21D2F52ADA3AE8006D4517 /* ImageViewLargeCollectionViewCell.xib */,
+				4F21D2F82ADA46D5006D4517 /* ImageViewSmallCollectionViewCell.swift */,
+				4F21D2F92ADA46D5006D4517 /* ImageViewSmallCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		4FEA65BD2AD946740022DD46 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
 				4FEA65C62AD946A90022DD46 /* SwiftyJSON */,
-				4FEA65C12AD9469A0022DD46 /* CoreAnimation */,
 				4FEA65BE2AD946990022DD46 /* Dispatch */,
 				4FEA65C02AD9469A0022DD46 /* Shared */,
-				4FEA65BF2AD946990022DD46 /* UIKit */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -112,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				9AD25D6A2AD84A4F00AE6199 /* HackathonVnpay.app */,
-				9AD25D802AD84A5100AE6199 /* HackathonVnpayTests.xctest */,
-				9AD25D8A2AD84A5100AE6199 /* HackathonVnpayUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +113,7 @@
 		9AD25D6C2AD84A4F00AE6199 /* HackathonVnpay */ = {
 			isa = PBXGroup;
 			children = (
+				4F21D2FC2ADA5AC9006D4517 /* DetailImage */,
 				4FEA65BD2AD946740022DD46 /* Extention */,
 				9AD25D6D2AD84A4F00AE6199 /* AppDelegate.swift */,
 				9AD25D6F2AD84A4F00AE6199 /* SceneDelegate.swift */,
@@ -153,42 +146,6 @@
 			productReference = 9AD25D6A2AD84A4F00AE6199 /* HackathonVnpay.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9AD25D7F2AD84A5100AE6199 /* HackathonVnpayTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9AD25D972AD84A5100AE6199 /* Build configuration list for PBXNativeTarget "HackathonVnpayTests" */;
-			buildPhases = (
-				9AD25D7C2AD84A5100AE6199 /* Sources */,
-				9AD25D7D2AD84A5100AE6199 /* Frameworks */,
-				9AD25D7E2AD84A5100AE6199 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9AD25D822AD84A5100AE6199 /* PBXTargetDependency */,
-			);
-			name = HackathonVnpayTests;
-			productName = HackathonVnpayTests;
-			productReference = 9AD25D802AD84A5100AE6199 /* HackathonVnpayTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		9AD25D892AD84A5100AE6199 /* HackathonVnpayUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9AD25D9A2AD84A5100AE6199 /* Build configuration list for PBXNativeTarget "HackathonVnpayUITests" */;
-			buildPhases = (
-				9AD25D862AD84A5100AE6199 /* Sources */,
-				9AD25D872AD84A5100AE6199 /* Frameworks */,
-				9AD25D882AD84A5100AE6199 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9AD25D8C2AD84A5100AE6199 /* PBXTargetDependency */,
-			);
-			name = HackathonVnpayUITests;
-			productName = HackathonVnpayUITests;
-			productReference = 9AD25D8A2AD84A5100AE6199 /* HackathonVnpayUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,14 +158,6 @@
 				TargetAttributes = {
 					9AD25D692AD84A4F00AE6199 = {
 						CreatedOnToolsVersion = 14.3.1;
-					};
-					9AD25D7F2AD84A5100AE6199 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 9AD25D692AD84A4F00AE6199;
-					};
-					9AD25D892AD84A5100AE6199 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 9AD25D692AD84A4F00AE6199;
 					};
 				};
 			};
@@ -226,8 +175,6 @@
 			projectRoot = "";
 			targets = (
 				9AD25D692AD84A4F00AE6199 /* HackathonVnpay */,
-				9AD25D7F2AD84A5100AE6199 /* HackathonVnpayTests */,
-				9AD25D892AD84A5100AE6199 /* HackathonVnpayUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,27 +184,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FEA65C32AD9469A0022DD46 /* UIKit in Resources */,
+				4F21D2FB2ADA46D5006D4517 /* ImageViewSmallCollectionViewCell.xib in Resources */,
 				4FEA65C22AD9469A0022DD46 /* Dispatch in Resources */,
 				9AD25D7A2AD84A5100AE6199 /* LaunchScreen.storyboard in Resources */,
 				9AD25D772AD84A5100AE6199 /* Assets.xcassets in Resources */,
 				9AD25D752AD84A4F00AE6199 /* Main.storyboard in Resources */,
+				4F21D2F72ADA3AE8006D4517 /* ImageViewLargeCollectionViewCell.xib in Resources */,
+				4F21D2F32ADA3A3A006D4517 /* DetailImageViewController.xib in Resources */,
 				4FEA65C42AD9469A0022DD46 /* Shared in Resources */,
-				4FEA65C52AD9469A0022DD46 /* CoreAnimation in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9AD25D7E2AD84A5100AE6199 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9AD25D882AD84A5100AE6199 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,41 +202,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F21D2F62ADA3AE8006D4517 /* ImageViewLargeCollectionViewCell.swift in Sources */,
 				9AD25D722AD84A4F00AE6199 /* ViewController.swift in Sources */,
 				9AD25D6E2AD84A4F00AE6199 /* AppDelegate.swift in Sources */,
+				4F21D2F22ADA3A3A006D4517 /* DetailImageViewController.swift in Sources */,
 				9AD25D702AD84A4F00AE6199 /* SceneDelegate.swift in Sources */,
 				4FEA65C82AD946B60022DD46 /* SwiftyJSON.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9AD25D7C2AD84A5100AE6199 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9AD25D862AD84A5100AE6199 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				4F21D2FA2ADA46D5006D4517 /* ImageViewSmallCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9AD25D822AD84A5100AE6199 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9AD25D692AD84A4F00AE6199 /* HackathonVnpay */;
-			targetProxy = 9AD25D812AD84A5100AE6199 /* PBXContainerItemProxy */;
-		};
-		9AD25D8C2AD84A5100AE6199 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9AD25D692AD84A4F00AE6199 /* HackathonVnpay */;
-			targetProxy = 9AD25D8B2AD84A5100AE6199 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9AD25D732AD84A4F00AE6199 /* Main.storyboard */ = {
@@ -445,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BWHH5CKUUL;
+				DEVELOPMENT_TEAM = QVEQ57W733;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HackathonVnpay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -474,7 +384,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BWHH5CKUUL;
+				DEVELOPMENT_TEAM = QVEQ57W733;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HackathonVnpay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -496,82 +406,6 @@
 			};
 			name = Release;
 		};
-		9AD25D982AD84A5100AE6199 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BWHH5CKUUL;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vnpay.HackathonVnpayTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackathonVnpay.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HackathonVnpay";
-			};
-			name = Debug;
-		};
-		9AD25D992AD84A5100AE6199 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BWHH5CKUUL;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vnpay.HackathonVnpayTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackathonVnpay.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HackathonVnpay";
-			};
-			name = Release;
-		};
-		9AD25D9B2AD84A5100AE6199 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BWHH5CKUUL;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vnpay.HackathonVnpayUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HackathonVnpay;
-			};
-			name = Debug;
-		};
-		9AD25D9C2AD84A5100AE6199 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BWHH5CKUUL;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vnpay.HackathonVnpayUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HackathonVnpay;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -589,24 +423,6 @@
 			buildConfigurations = (
 				9AD25D952AD84A5100AE6199 /* Debug */,
 				9AD25D962AD84A5100AE6199 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9AD25D972AD84A5100AE6199 /* Build configuration list for PBXNativeTarget "HackathonVnpayTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9AD25D982AD84A5100AE6199 /* Debug */,
-				9AD25D992AD84A5100AE6199 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9AD25D9A2AD84A5100AE6199 /* Build configuration list for PBXNativeTarget "HackathonVnpayUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9AD25D9B2AD84A5100AE6199 /* Debug */,
-				9AD25D9C2AD84A5100AE6199 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

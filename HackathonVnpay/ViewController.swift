@@ -9,9 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    @IBAction func open(){
+        let vc = DetailImageViewController()
+        self.present(vc, animated: true)
+      //  self.navigationController?.pushViewController(vc, animated: true)
     }
 
 
