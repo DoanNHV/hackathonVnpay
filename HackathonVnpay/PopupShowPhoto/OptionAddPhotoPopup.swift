@@ -108,6 +108,10 @@ extension OptionAddPhotoPopup: UICollectionViewDelegate, UICollectionViewDataSou
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = DetailImageViewController()
+        vc.listImage = [assetArray[indexPath.row]]
+        self.navigationController?.pushViewController(vc, animated: true)
+        return
         if listImageSelected.contains(where: { poo in
             poo.phaset == assetArray[indexPath.row].phaset
         }) {}
