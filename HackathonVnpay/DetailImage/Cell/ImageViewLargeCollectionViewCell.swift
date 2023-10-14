@@ -23,31 +23,43 @@ class ImageViewLargeCollectionViewCell: UICollectionViewCell,UIScrollViewDelegat
   
  // let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch))
  // imageView.addGestureRecognizer(pinchGesture)
-        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openImage)))
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap(sender:)))
+        doubleTapGesture.numberOfTapsRequired = 2
+        imageView.addGestureRecognizer(doubleTapGesture)
+        imageView.isUserInteractionEnabled = true
         // Initialization code
     }
-    @objc func openImage(){
-       onOpen?()
+    
+    @objc func handleDoubleTap(sender: UITapGestureRecognizer) {
+        if scrollView.zoomScale < scrollView.maximumZoomScale {
+            let location = sender.location(in: sender.view)
+            let rectToZoomTo = CGRect(x: location.x, y: location.y, width: 1, height: 1)
+       //     scrollView.zoom(to: rectToZoomTo, animated: true)
+            let currentZoomScale = scrollView.zoomScale
+
+            let zoomRect = zoomRectForScale(currentZoomScale * 2, center: location)
+
+            scrollView.zoom(to: zoomRect, animated: true)
+
+
+        } else {
+            scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
+        }
     }
-//    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
-//           if scale > 1.0 {
-//               onChangeState?(true)
-//               // ScrollView đang trong trạng thái zoom
-//           } else {
-//               onChangeState?(false)
-//               // ScrollView không đang trong trạng thái zoom
-//           }
-//       }
- 
+    func zoomRectForScale(_ scale: CGFloat, center: CGPoint) -> CGRect {
+        var zoomRect = CGRect.zero
+        zoomRect.size.height = scrollView.frame.size.height / scale
+        zoomRect.size.width = scrollView.frame.size.width / scale
+        let newCenter = scrollView.convert(center, to: scrollView)
+        zoomRect.origin.x = newCenter.x - (zoomRect.size.width / 2.0)
+        zoomRect.origin.y = newCenter.y - (zoomRect.size.height / 2.0)
+        return zoomRect
+    }
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
         if scrollView.zoomScale == 1.0 {
             onChangeState?(false)
-
-            // Đang ở trạng thái không zoom
         } else {
-            // Đang ở trạng thái zoom
             onChangeState?(true)
-
         }
     }
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
@@ -58,24 +70,5 @@ class ImageViewLargeCollectionViewCell: UICollectionViewCell,UIScrollViewDelegat
         imageView.image = image
     }
 
-    
-//    @IBAction func handlePinch(_ sender: UIPinchGestureRecognizer) {
-//        if sender.state == .changed {
-//            onChangeState?(true)
-//            let currentScale = imageView.frame.size.width / imageView.bounds.size.width
-//            var newScale = currentScale * sender.scale
-//            if newScale < scrollView.minimumZoomScale {
-//                newScale = scrollView.minimumZoomScale
-//            }
-//            if newScale > scrollView.maximumZoomScale {
-//                newScale = scrollView.maximumZoomScale
-//            }
-//            let transform = CGAffineTransform(scaleX: newScale, y: newScale)
-//            imageView.transform = transform
-//            sender.scale = 1
-//        }
-//        else {
-//             onChangeState?(false)
-//        }
-//    }
+
 }
