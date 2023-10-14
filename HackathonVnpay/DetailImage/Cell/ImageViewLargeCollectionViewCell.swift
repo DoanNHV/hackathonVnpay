@@ -31,7 +31,6 @@ class ImageViewLargeCollectionViewCell: UICollectionViewCell,UIScrollViewDelegat
         if scrollView.zoomScale < scrollView.maximumZoomScale {
             let location = sender.location(in: sender.view)
             let rectToZoomTo = CGRect(x: location.x, y: location.y, width: 1, height: 1)
-       //     scrollView.zoom(to: rectToZoomTo, animated: true)
             let currentZoomScale = scrollView.zoomScale
 
             let zoomRect = zoomRectForScale(currentZoomScale * 2, center: location)

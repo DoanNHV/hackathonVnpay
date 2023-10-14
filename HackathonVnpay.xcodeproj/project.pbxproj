@@ -85,8 +85,7 @@
 		9A4B17702ADA3FE20018D142 /* PopupShowPhoto */ = {
 			isa = PBXGroup;
 			children = (
-				9A4B17712ADA3FE20018D142 /* LibPhotoCollectionViewCell.xib */,
-				9A4B17722ADA3FE20018D142 /* LibPhotoCollectionViewCell.swift */,
+				9A4D4BF52ADA7551001B78A3 /* Cell */,
 				9A4B17732ADA3FE20018D142 /* OptionAddPhotoPopup.xib */,
 				9A4B17742ADA3FE20018D142 /* OptionAddPhotoPopup.swift */,
 			);
@@ -107,6 +106,15 @@
 				9A4B177E2ADA5C740018D142 /* TableView + Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		9A4D4BF52ADA7551001B78A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9A4B17712ADA3FE20018D142 /* LibPhotoCollectionViewCell.xib */,
+				9A4B17722ADA3FE20018D142 /* LibPhotoCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		9AD25D612AD84A4F00AE6199 = {
