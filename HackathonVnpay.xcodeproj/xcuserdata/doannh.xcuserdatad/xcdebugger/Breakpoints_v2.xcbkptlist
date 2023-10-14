@@ -72,7 +72,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9BE3BD29-8B74-4837-8E1E-0E46821818AF"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackathonVnpay/ViewController.swift"
@@ -388,17 +388,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CF139455-69F2-45E3-95A5-17FE4CCCD276"
-            shouldBeEnabled = "Yes"
+            uuid = "D43CB560-B681-4B8E-8FF3-E0D838D28AA3"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "OptionAddPhotoPopup"
-            landmarkType = "3">
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D43CB560-B681-4B8E-8FF3-E0D838D28AA3 - 2dd5735ecc429075"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackathonVnpay.OptionAddPhotoPopup.collectionView(_: __C.UICollectionView, layout: __C.UICollectionViewLayout, sizeForItemAt: Foundation.IndexPath) -&gt; __C.CGSize"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "D43CB560-B681-4B8E-8FF3-E0D838D28AA3 - 2dd5735ecc429075"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackathonVnpay.OptionAddPhotoPopup.collectionView(_: __C.UICollectionView, layout: __C.UICollectionViewLayout, sizeForItemAt: Foundation.IndexPath) -&gt; __C.CGSize"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

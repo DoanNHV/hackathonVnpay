@@ -43,7 +43,7 @@ class ViewController: UIViewController {
                 }
             }
         case .restricted, .denied:
-            DispatchQueue.main.async { [weak self] in
+            DispatchQueue.main.async {
 //                self?.presentLibraryPermissionAlert()
             }
         case .authorized:
@@ -66,14 +66,11 @@ class ViewController: UIViewController {
             
             self.listAssesSelected.forEach { assesst in
                 self.dispatchGroup.enter()
-                self.imageManager.requestImage(for: assesst.phaset, targetSize: CGSize(width: 1000, height: 1000), contentMode: .aspectFit, options: self.imageOption) { image, _ in
-                    if let originalImage = image {
-                        let resizedImage = self.resizeImage(image: originalImage, maxFileSize: 600)
-                        if let resizedImage = resizedImage {
-                            let existingImage = self.listImagePhotoShopName.filter { $0.assesst?.localIdentifier == assesst.phaset.localIdentifier }.first
-                            if existingImage == nil {
-                                debugPrint("size", assesst.phaset.fileSize)
-                            }
+                self.imageManager.requestImage(for: assesst.phaset, targetSize: PHImageManagerMaximumSize, contentMode: .aspectFit, options: self.imageOption) { image, _ in
+                    if image != nil {
+                        let existingImage = self.listImagePhotoShopName.filter { $0.assesst?.localIdentifier == assesst.phaset.localIdentifier }.first
+                        if existingImage == nil {
+                            debugPrint("size", assesst.phaset.fileSize)
                         }
                     }
                     self.dispatchGroup.leave()

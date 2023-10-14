@@ -38,7 +38,7 @@ class OptionAddPhotoPopup: UIViewController {
 
     override func viewDidLoad() {
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 4, right: 0)
         flowLayout.scrollDirection = .vertical
         allPhotos = PHAsset.fetchAssets(with: assetOption)
         collectionView.collectionViewLayout = flowLayout
@@ -58,36 +58,6 @@ class OptionAddPhotoPopup: UIViewController {
 
         collectionView.reloadData()
     }
-    
-//    fileprivate func getPhotos() {
-//        let manager = PHImageManager.default()
-//        let requestOptions = PHImageRequestOptions()
-//        requestOptions.includeAssetSourceTypes = [.typeCloudShared, .typeUserLibrary]
-//        requestOptions.isSynchronous = false
-//        requestOptions.deliveryMode = .highQualityFormat
-//        // .highQualityFormat will return better quality photos
-//        let fetchOptions = PHFetchOptions()
-//        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-//
-//        let results: PHFetchResult = PHAsset.fetchAssets(with: .image, options: fetchOptions)
-//        if results.count > 0 {
-//            for i in 0..<results.count {
-//                let asset = results.object(at: i)
-//                let size = CGSize(width: 700, height: 700)
-//                manager.requestImage(for: asset, targetSize: size, contentMode: .aspectFill, options: requestOptions) { (image, _) in
-//                    if let image = image {
-////                        self.images.append(image)
-//                        self.collectionView.reloadData()
-//                    } else {
-//                        print("error asset to image")
-//                    }
-//                }
-//            }
-//        } else {
-//            print("no photos to display")
-//        }
-//
-//    }
 
     init(listImageSelected: [PhotoLocal], listImageCommon: [Photo], listImageShopName: [Photo]) {
         self.listImageSelected = listImageSelected
@@ -111,7 +81,7 @@ extension OptionAddPhotoPopup: UICollectionViewDelegate, UICollectionViewDataSou
         let cell = collectionView.dequeueCell(LibPhotoCollectionViewCell.self, at: indexPath)
         let asset = assetArray[indexPath.item]
         cell.representedAssetIdentifier = asset.phaset.localIdentifier
-        imageManager.requestImage(for: asset.phaset, targetSize: CGSize(width: 1000, height: 1000), contentMode: .aspectFit, options: imageOption, resultHandler: { [weak cell] image, _ in
+        imageManager.requestImage(for: asset.phaset, targetSize: CGSize(width: 360, height: 360), contentMode: .aspectFill, options: imageOption, resultHandler: { [weak cell] image, _ in
             if cell?.representedAssetIdentifier == asset.phaset.localIdentifier {
                 cell?.setImage(image: image ?? UIImage(), isCheck: asset.isSelected)
             }
@@ -124,8 +94,17 @@ extension OptionAddPhotoPopup: UICollectionViewDelegate, UICollectionViewDataSou
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let screenWidth = UIScreen.main.bounds.width - 20
-        return CGSize(width: screenWidth / 3, height: screenWidth / 3)
+        let screenWidth = UIScreen.main.bounds.width - 16
+        let widthItem = CGFloat(screenWidth)/5
+        return CGSize(width: widthItem, height: widthItem)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.00001
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

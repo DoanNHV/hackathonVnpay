@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LibPhotoCollectionViewCell" customModule="CoopBank" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LibPhotoCollectionViewCell" customModule="HackathonVnpay" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="133" height="108"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -43,7 +43,7 @@
                 <outlet property="clickImageView" destination="nwa-7K-7Rm" id="6By-Tc-NSL"/>
                 <outlet property="imageView" destination="cqh-8w-HFV" id="4WF-dl-8pw"/>
             </connections>
-            <point key="canvasLocation" x="-32.824427480916029" y="40.845070422535215"/>
+            <point key="canvasLocation" x="66" y="37"/>
         </collectionViewCell>
     </objects>
 </document>
