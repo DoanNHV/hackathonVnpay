@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="collectionView" destination="3j0-EO-RAc" id="zRk-w4-tcK"/>
                 <outlet property="view" destination="iN0-l3-epB" id="PiL-ch-brK"/>
+                <outlet property="viewButtonSend" destination="wJv-Js-XqI" id="hT9-Fr-tjN"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3j0-EO-RAc">
-                    <rect key="frame" x="0.0" y="79" width="393" height="486"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="506"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="RrC-9y-lnj">
                         <size key="itemSize" width="128" height="128"/>
@@ -30,20 +31,45 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJv-Js-XqI">
+                    <rect key="frame" x="303" y="475" width="60" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzV-VK-TAA">
+                            <rect key="frame" x="16" y="16" width="28" height="28"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="send-message"/>
+                            <connections>
+                                <action selector="actionSend:" destination="-1" eventType="touchUpInside" id="zHY-Bv-lmU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="uzV-VK-TAA" firstAttribute="top" secondItem="wJv-Js-XqI" secondAttribute="top" constant="16" id="1Qc-8G-A7u"/>
+                        <constraint firstItem="uzV-VK-TAA" firstAttribute="leading" secondItem="wJv-Js-XqI" secondAttribute="leading" constant="16" id="36X-bI-qVW"/>
+                        <constraint firstAttribute="width" constant="60" id="4db-oh-Sp5"/>
+                        <constraint firstAttribute="trailing" secondItem="uzV-VK-TAA" secondAttribute="trailing" constant="16" id="JTz-Mw-f3A"/>
+                        <constraint firstAttribute="bottom" secondItem="uzV-VK-TAA" secondAttribute="bottom" constant="16" id="wGj-8J-W61"/>
+                        <constraint firstAttribute="width" secondItem="wJv-Js-XqI" secondAttribute="height" multiplier="1:1" id="yOM-8c-Jfe"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3j0-EO-RAc" secondAttribute="trailing" id="6eY-9S-RiZ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3j0-EO-RAc" secondAttribute="bottom" id="AYf-z0-jJt"/>
-                <constraint firstItem="3j0-EO-RAc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="RFy-am-cCj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="wJv-Js-XqI" secondAttribute="bottom" constant="30" id="D7r-n0-G70"/>
+                <constraint firstItem="3j0-EO-RAc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="RFy-am-cCj"/>
                 <constraint firstItem="3j0-EO-RAc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Sng-bG-4dz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wJv-Js-XqI" secondAttribute="trailing" constant="30" id="v0I-qb-l3U"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-547.32824427480909" y="-69.366197183098592"/>
+            <point key="canvasLocation" x="156" y="-111"/>
         </view>
     </objects>
     <resources>
+        <image name="send-message" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

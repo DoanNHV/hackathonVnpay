@@ -18,12 +18,7 @@ class DetailImageViewController: UIViewController {
         imageOption.resizeMode = .exact
         return imageOption
     }()
-    var itemSelectedIndex = 0 {
-        didSet {
-            collectionView2.reloadData()
-        }
-       
-    }
+    var itemSelectedIndex : Int = 0
     private let widthImageNho : CGFloat =  80
     var listImage = [PhotoLocal]()
     override func viewDidLoad() {
@@ -97,19 +92,20 @@ extension DetailImageViewController: UICollectionViewDelegate, UICollectionViewD
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView2 == collectionView {
-            collectionView1.scrollToItem(at: indexPath, at: .top, animated: true)
+            collectionView1.scrollToItem(at: indexPath, at: .top, animated: false)
+            let index = itemSelectedIndex
             itemSelectedIndex = indexPath.item
+            self.collectionView2.reloadItems(at: [IndexPath(item: itemSelectedIndex, section: 0),IndexPath(item: index, section: 0)])
         }
     }
-    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if collectionView1 == collectionView {
-            itemSelectedIndex = indexPath.row
-            let visibleIndexPaths = collectionView2.indexPathsForVisibleItems
-            if !visibleIndexPaths.contains(indexPath) {
-                collectionView2.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
-            }
-        }
+            let index = itemSelectedIndex
+            itemSelectedIndex = indexPath.item
+            self.collectionView2.reloadItems(at: [IndexPath(item: itemSelectedIndex, section: 0),IndexPath(item: index, section: 0)])
 
+            collectionView2.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

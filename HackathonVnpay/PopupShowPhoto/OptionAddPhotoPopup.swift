@@ -20,16 +20,18 @@ class OptionAddPhotoPopup: UIViewController {
     private var listIndexPathReload = [IndexPath]()
     private let imageManager = PHCachingImageManager()
     private var itemCount = 0
+    var indexPathToCount: [IndexPath: Int] = [:]
 
     var count = 0
 
+    @IBOutlet weak var viewButtonSend: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     private lazy var assetOption: PHFetchOptions = {
         let allPhotosOptions = PHFetchOptions()
         allPhotosOptions.includeHiddenAssets = false
         allPhotosOptions.includeAllBurstAssets = false
         allPhotosOptions.predicate = NSPredicate(format: "mediaType = %d", PHAssetMediaType.image.rawValue)
-        allPhotosOptions.includeAssetSourceTypes = [.typeCloudShared, .typeUserLibrary, .typeiTunesSynced]
+        allPhotosOptions.includeAssetSourceTypes = [.typeUserLibrary, .typeiTunesSynced]
         allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         return allPhotosOptions
     }()
@@ -42,6 +44,8 @@ class OptionAddPhotoPopup: UIViewController {
     }()
 
     override func viewDidLoad() {
+        // setup view
+        self.viewButtonSend.layer.cornerRadius = 30
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 4, right: 0)
         flowLayout.scrollDirection = .vertical
@@ -75,9 +79,17 @@ class OptionAddPhotoPopup: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    @IBAction func didTapDoneAction(_ sender: Any) {
-        getListPhotoLocal?(assetArray)
+    
+    @IBAction func actionSend(_ sender: Any) {
+        if (self.getListImageSelected().count > 0) {
+            let detailController = DetailImageViewController()
+            detailController.listImage = self.getListImageSelected()
+            self.navigationController?.pushViewController(detailController, animated: true)
+        }
+    }
+    
+    func getListImageSelected() -> [PhotoLocal] {
+        return assetArray.filter { $0.isSelected == true }
     }
 }
 
@@ -89,6 +101,10 @@ extension OptionAddPhotoPopup: UICollectionViewDelegate, UICollectionViewDataSou
         imageManager.requestImage(for: asset.phaset, targetSize: CGSize(width: 360, height: 360), contentMode: .aspectFill, options: imageOption, resultHandler: { [weak cell] image, _ in
             if cell?.representedAssetIdentifier == asset.phaset.localIdentifier {
                 cell?.setImage(image: image ?? UIImage(), isCheck: asset.isSelected, count: self.itemCount)
+            }
+
+            if let countForCell = self.indexPathToCount[indexPath] {
+                cell?.setImage(image: image ?? UIImage(), isCheck: asset.isSelected, count: countForCell)
             }
         })
         return cell
@@ -120,14 +136,18 @@ extension OptionAddPhotoPopup: UICollectionViewDelegate, UICollectionViewDataSou
         if assetArray[indexPath.row].isSelected {
             listIndexPathSelected.append(indexPath)
             itemCount = listIndexPathSelected.count
+            indexPathToCount[indexPath] = itemCount
         } else {
             if let index = listIndexPathSelected.firstIndex(of: indexPath) {
                 listIndexPathReload = Array(listIndexPathSelected[index...])
                 listIndexPathSelected.remove(at: index)
-                for indexPath in listIndexPathSelected {
-                    itemCount -= 1
-                    collectionView.reloadItems(at: [indexPath])
+
+                for subsequentIndexPath in listIndexPathReload {
+                    if let currentCount = indexPathToCount[subsequentIndexPath] {
+                        indexPathToCount[subsequentIndexPath] = currentCount - 1
+                    }
                 }
+                collectionView.reloadItems(at: listIndexPathReload)
             }
         }
         collectionView.reloadItems(at: [indexPath])
