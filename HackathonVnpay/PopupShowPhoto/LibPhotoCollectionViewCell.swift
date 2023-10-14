@@ -13,17 +13,22 @@ class LibPhotoCollectionViewCell: UICollectionViewCell {
     var representedAssetIdentifier: String!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var clickImageView: UIImageView!
+    @IBOutlet weak var countLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func setImage(image: UIImage, isCheck: Bool) {
+    func setImage(image: UIImage, isCheck: Bool, count: Int) {
+       
         imageView.image = image
         if isCheck {
+            countLabel.text = String(count)
+            countLabel.isHidden = false
             clickImageView.image = UIImage(named: "ic_qr_check")
         } else {
             clickImageView.image = UIImage(named: "ic_qr_uncheck")
+            countLabel.isHidden = true
         }
     }
 

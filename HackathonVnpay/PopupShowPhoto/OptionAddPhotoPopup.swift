@@ -16,7 +16,12 @@ class OptionAddPhotoPopup: UIViewController {
     private var assetArray: [PhotoLocal] = []
     var listImagePhoto: [Photo] = []
     var listImageCommon: [Photo] = []
+    private var listIndexPathSelected = [IndexPath]()
+    private var listIndexPathReload = [IndexPath]()
     private let imageManager = PHCachingImageManager()
+    private var itemCount = 0
+
+    var count = 0
 
     @IBOutlet weak var collectionView: UICollectionView!
     private lazy var assetOption: PHFetchOptions = {
@@ -24,7 +29,7 @@ class OptionAddPhotoPopup: UIViewController {
         allPhotosOptions.includeHiddenAssets = false
         allPhotosOptions.includeAllBurstAssets = false
         allPhotosOptions.predicate = NSPredicate(format: "mediaType = %d", PHAssetMediaType.image.rawValue)
-        allPhotosOptions.includeAssetSourceTypes =  [.typeCloudShared, .typeUserLibrary, .typeiTunesSynced]
+        allPhotosOptions.includeAssetSourceTypes = [.typeCloudShared, .typeUserLibrary, .typeiTunesSynced]
         allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         return allPhotosOptions
     }()
@@ -58,36 +63,6 @@ class OptionAddPhotoPopup: UIViewController {
 
         collectionView.reloadData()
     }
-    
-//    fileprivate func getPhotos() {
-//        let manager = PHImageManager.default()
-//        let requestOptions = PHImageRequestOptions()
-//        requestOptions.includeAssetSourceTypes = [.typeCloudShared, .typeUserLibrary]
-//        requestOptions.isSynchronous = false
-//        requestOptions.deliveryMode = .highQualityFormat
-//        // .highQualityFormat will return better quality photos
-//        let fetchOptions = PHFetchOptions()
-//        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-//
-//        let results: PHFetchResult = PHAsset.fetchAssets(with: .image, options: fetchOptions)
-//        if results.count > 0 {
-//            for i in 0..<results.count {
-//                let asset = results.object(at: i)
-//                let size = CGSize(width: 700, height: 700)
-//                manager.requestImage(for: asset, targetSize: size, contentMode: .aspectFill, options: requestOptions) { (image, _) in
-//                    if let image = image {
-////                        self.images.append(image)
-//                        self.collectionView.reloadData()
-//                    } else {
-//                        print("error asset to image")
-//                    }
-//                }
-//            }
-//        } else {
-//            print("no photos to display")
-//        }
-//
-//    }
 
     init(listImageSelected: [PhotoLocal], listImageCommon: [Photo], listImageShopName: [Photo]) {
         self.listImageSelected = listImageSelected
@@ -113,7 +88,7 @@ extension OptionAddPhotoPopup: UICollectionViewDelegate, UICollectionViewDataSou
         cell.representedAssetIdentifier = asset.phaset.localIdentifier
         imageManager.requestImage(for: asset.phaset, targetSize: CGSize(width: 1000, height: 1000), contentMode: .aspectFit, options: imageOption, resultHandler: { [weak cell] image, _ in
             if cell?.representedAssetIdentifier == asset.phaset.localIdentifier {
-                cell?.setImage(image: image ?? UIImage(), isCheck: asset.isSelected)
+                cell?.setImage(image: image ?? UIImage(), isCheck: asset.isSelected, count: self.itemCount)
             }
         })
         return cell
@@ -133,7 +108,19 @@ extension OptionAddPhotoPopup: UICollectionViewDelegate, UICollectionViewDataSou
             poo.phaset == assetArray[indexPath.row].phaset
         }) {}
         assetArray[indexPath.row].isSelected.toggle()
-
+        if assetArray[indexPath.row].isSelected {
+            listIndexPathSelected.append(indexPath)
+            itemCount = listIndexPathSelected.count
+        } else {
+            if let index = listIndexPathSelected.firstIndex(of: indexPath) {
+                listIndexPathReload = Array(listIndexPathSelected[index...])
+                listIndexPathSelected.remove(at: index)
+                for indexPath in listIndexPathSelected {
+                    itemCount -= 1
+                    collectionView.reloadItems(at: [indexPath])
+                }
+            }
+        }
         collectionView.reloadItems(at: [indexPath])
     }
 }

@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LibPhotoCollectionViewCell" customModule="CoopBank" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LibPhotoCollectionViewCell" customModule="HackathonVnpay" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="133" height="108"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -27,20 +27,29 @@
                             <constraint firstAttribute="height" constant="24" id="fVK-yN-nnx"/>
                         </constraints>
                     </imageView>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gp-yU-6m1">
+                        <rect key="frame" x="10" y="10" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="4gp-yU-6m1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="EUq-t9-1p2"/>
                 <constraint firstItem="nwa-7K-7Rm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="F3X-8G-ULD"/>
                 <constraint firstAttribute="trailing" secondItem="nwa-7K-7Rm" secondAttribute="trailing" id="Fbz-6B-PzU"/>
                 <constraint firstAttribute="bottom" secondItem="cqh-8w-HFV" secondAttribute="bottom" id="L1u-ih-cng"/>
                 <constraint firstItem="cqh-8w-HFV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PJA-XD-CYY"/>
                 <constraint firstItem="cqh-8w-HFV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dua-bw-jYt"/>
+                <constraint firstItem="4gp-yU-6m1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="ejc-WA-XKG"/>
                 <constraint firstAttribute="trailing" secondItem="cqh-8w-HFV" secondAttribute="trailing" id="fHO-nL-Mnw"/>
             </constraints>
             <size key="customSize" width="133" height="108"/>
             <connections>
                 <outlet property="clickImageView" destination="nwa-7K-7Rm" id="6By-Tc-NSL"/>
+                <outlet property="countLabel" destination="4gp-yU-6m1" id="1XB-sQ-56k"/>
                 <outlet property="imageView" destination="cqh-8w-HFV" id="4WF-dl-8pw"/>
             </connections>
             <point key="canvasLocation" x="-32.824427480916029" y="40.845070422535215"/>
