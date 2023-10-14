@@ -9,18 +9,7 @@ import Photos
 import UIKit
 
 class ViewController: UIViewController {
-    private var imageNotRequirement: [Photo] = []
-    lazy var listAssesSelected: [PhotoLocal] = []
-    var listImagePhotoShopName = [Photo]()
-    lazy var dispatchGroup = DispatchGroup()
-    private lazy var imageOption: PHImageRequestOptions = {
-        let imageOption = PHImageRequestOptions()
-        imageOption.deliveryMode = .highQualityFormat
-        imageOption.resizeMode = .exact
-        return imageOption
-    }()
-    
-    let imageManager = PHImageManager.default()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -42,10 +31,7 @@ class ViewController: UIViewController {
                     return
                 }
             }
-        case .restricted, .denied:
-            DispatchQueue.main.async {
-//                self?.presentLibraryPermissionAlert()
-            }
+        case .restricted, .denied: break
         case .authorized:
             fetchAllPhotos()
         case .limited:
@@ -58,70 +44,11 @@ class ViewController: UIViewController {
     }
     
     private func fetchAllPhotos() {
-        let vc = OptionAddPhotoPopup(listImageSelected: listAssesSelected, listImageCommon: listImagePhotoShopName, listImageShopName: listImagePhotoShopName)
-        imageNotRequirement.removeAll()
-        vc.getListPhotoLocal = { [weak self] listAsses in
-            guard let self = self else { return }
-            self.listAssesSelected = listAsses.filter { $0.isSelected }
-            
-            self.listAssesSelected.forEach { assesst in
-                self.dispatchGroup.enter()
-                self.imageManager.requestImage(for: assesst.phaset, targetSize: PHImageManagerMaximumSize, contentMode: .aspectFit, options: self.imageOption) { image, _ in
-                    if image != nil {
-                        let existingImage = self.listImagePhotoShopName.filter { $0.assesst?.localIdentifier == assesst.phaset.localIdentifier }.first
-                        if existingImage == nil {
-                            debugPrint("size", assesst.phaset.fileSize)
-                        }
-                    }
-                    self.dispatchGroup.leave()
-                }
-            }
-            
-            self.dispatchGroup.notify(queue: .main) {
-//                self.collectionView.reloadData()
-            }
-            // xoá ảnh khi người dùng bấm tích chọn lại
-            self.listImagePhotoShopName.removeAll { photo in
-                !(self.listAssesSelected.contains(where: { imageSelected in
-                    imageSelected.phaset == photo.assesst
-                })) && photo.assesst != nil
-            }
-        }
+        let vc = OptionAddPhotoPopup()
         self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    func resizeImage(image: UIImage, maxFileSize: Int) -> UIImage? {
-        var compressionQuality: CGFloat = 1.0
-        var imageData = image.jpegData(compressionQuality: compressionQuality)
-           
-        while let data = imageData, Double(data.count) / 1024.0 > Double(maxFileSize) {
-            compressionQuality -= 0.1
-            if compressionQuality <= 0.0 {
-                break
-            }
-            imageData = image.jpegData(compressionQuality: compressionQuality)
-        }
-           
-        if let finalImageData = imageData, let resizedImage = UIImage(data: finalImageData) {
-            let imageSizeInBytes = finalImageData.count
-            let imageSizeInKB = Double(imageSizeInBytes) / 1024.0
-            print("Dung lượng ảnh: \(imageSizeInKB) KB")
-            return resizedImage
-        }
-           
-        return nil
     }
     
     @IBAction func didTapGetPhoto(_ sender: Any) {
         checkPhotoLibraryAuthorization()
-    }
-}
-
-extension PHAsset {
-    var fileSize: Float {
-        let resource = PHAssetResource.assetResources(for: self)
-        let imageSizeByte = resource.first?.value(forKey: "fileSize") as? Float ?? 0.0
-        let imageSizeMB = imageSizeByte / (1024.0 * 1024.0)
-        return imageSizeMB
     }
 }
