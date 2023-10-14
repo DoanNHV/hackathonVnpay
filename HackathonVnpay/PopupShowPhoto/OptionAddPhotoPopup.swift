@@ -10,19 +10,14 @@ import Photos
 import UIKit
 
 class OptionAddPhotoPopup: UIViewController {
-    private var allPhotos: PHFetchResult<PHAsset>!
-    var getListPhotoLocal: (([PhotoLocal]) -> Void)?
-    var listImageSelected: [PhotoLocal] = []
+    private var allPhotos = PHFetchResult<PHAsset>()
     private var assetArray: [PhotoLocal] = []
-    var listImagePhoto: [Photo] = []
-    var listImageCommon: [Photo] = []
     private var listIndexPathSelected = [IndexPath]()
     private var listIndexPathReload = [IndexPath]()
     private let imageManager = PHCachingImageManager()
     private var itemCount = 0
-    var indexPathToCount: [IndexPath: Int] = [:]
-
-    var count = 0
+    private var indexPathToCount: [IndexPath: Int] = [:]
+    private var count = 0
 
     @IBOutlet weak var viewButtonSend: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -45,7 +40,7 @@ class OptionAddPhotoPopup: UIViewController {
 
     override func viewDidLoad() {
         // setup view
-        self.viewButtonSend.layer.cornerRadius = 30
+        viewButtonSend.layer.cornerRadius = 30
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 4, right: 0)
         flowLayout.scrollDirection = .vertical
@@ -54,24 +49,15 @@ class OptionAddPhotoPopup: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerCell(LibPhotoCollectionViewCell.self)
-        for index in 0 ..< allPhotos.count {
-            let asset = allPhotos.object(at: index)
-            if listImageCommon.contains(where: { poo in
-                poo.assesst == asset
-            }) {
-                assetArray.append(.init(phaset: asset, isSelected: true))
-            } else {
-                assetArray.append(.init(phaset: asset))
-            }
+
+        allPhotos.enumerateObjects { [weak self] asset, _, _ in
+            self?.assetArray.append(.init(phaset: asset))
         }
 
         collectionView.reloadData()
     }
 
-    init(listImageSelected: [PhotoLocal], listImageCommon: [Photo], listImageShopName: [Photo]) {
-        self.listImageSelected = listImageSelected
-        self.listImageCommon = listImageCommon
-        listImagePhoto = listImageShopName
+    init() {
         super.init(nibName: "OptionAddPhotoPopup", bundle: nil)
     }
 
@@ -79,15 +65,15 @@ class OptionAddPhotoPopup: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     @IBAction func actionSend(_ sender: Any) {
-        if (self.getListImageSelected().count > 0) {
+        if !getListImageSelected().isEmpty {
             let detailController = DetailImageViewController()
-            detailController.listImage = self.getListImageSelected()
-            self.navigationController?.pushViewController(detailController, animated: true)
+            detailController.listImage = getListImageSelected()
+            navigationController?.pushViewController(detailController, animated: true)
         }
     }
-    
+
     func getListImageSelected() -> [PhotoLocal] {
         return assetArray.filter { $0.isSelected == true }
     }
@@ -116,22 +102,19 @@ extension OptionAddPhotoPopup: UICollectionViewDelegate, UICollectionViewDataSou
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width - 16
-        let widthItem = CGFloat(screenWidth)/5
+        let widthItem = CGFloat(screenWidth) / 5
         return CGSize(width: widthItem, height: widthItem)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 4
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.00001
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if listImageSelected.contains(where: { poo in
-            poo.phaset == assetArray[indexPath.row].phaset
-        }) {}
         assetArray[indexPath.row].isSelected.toggle()
         if assetArray[indexPath.row].isSelected {
             listIndexPathSelected.append(indexPath)
