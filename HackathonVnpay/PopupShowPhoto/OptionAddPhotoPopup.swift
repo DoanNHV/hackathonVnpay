@@ -20,6 +20,7 @@ class OptionAddPhotoPopup: UIViewController {
     private var listIndexPathReload = [IndexPath]()
     private let imageManager = PHCachingImageManager()
     private var itemCount = 0
+    var indexPathToCount: [IndexPath: Int] = [:]
 
     var count = 0
 
@@ -90,6 +91,10 @@ extension OptionAddPhotoPopup: UICollectionViewDelegate, UICollectionViewDataSou
             if cell?.representedAssetIdentifier == asset.phaset.localIdentifier {
                 cell?.setImage(image: image ?? UIImage(), isCheck: asset.isSelected, count: self.itemCount)
             }
+
+            if let countForCell = self.indexPathToCount[indexPath] {
+                cell?.setImage(image: image ?? UIImage(), isCheck: asset.isSelected, count: countForCell)
+            }
         })
         return cell
     }
@@ -111,14 +116,18 @@ extension OptionAddPhotoPopup: UICollectionViewDelegate, UICollectionViewDataSou
         if assetArray[indexPath.row].isSelected {
             listIndexPathSelected.append(indexPath)
             itemCount = listIndexPathSelected.count
+            indexPathToCount[indexPath] = itemCount
         } else {
             if let index = listIndexPathSelected.firstIndex(of: indexPath) {
                 listIndexPathReload = Array(listIndexPathSelected[index...])
                 listIndexPathSelected.remove(at: index)
-                for indexPath in listIndexPathSelected {
-                    itemCount -= 1
-                    collectionView.reloadItems(at: [indexPath])
+
+                for subsequentIndexPath in listIndexPathReload {
+                    if let currentCount = indexPathToCount[subsequentIndexPath] {
+                        indexPathToCount[subsequentIndexPath] = currentCount - 1
+                    }
                 }
+                collectionView.reloadItems(at: listIndexPathReload)
             }
         }
         collectionView.reloadItems(at: [indexPath])
