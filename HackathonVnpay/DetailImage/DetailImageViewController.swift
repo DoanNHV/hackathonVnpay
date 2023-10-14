@@ -21,14 +21,13 @@ class DetailImageViewController: UIViewController {
     var itemSelectedIndex : Int = 0
     private let widthImageNho : CGFloat =  80
     var listImage = [PhotoLocal]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectViewTo()
         configCollectViewNho()
-        
-        
-        // Do any additional setup after loading the view.
     }
+    
     func configCollectViewNho(){
         collectionView2.register(UINib(nibName: ImageViewSmallCollectionViewCell.indentifier, bundle: .main), forCellWithReuseIdentifier: ImageViewSmallCollectionViewCell.indentifier)
         collectionView2.dataSource = self
@@ -45,19 +44,15 @@ class DetailImageViewController: UIViewController {
         layout.minimumLineSpacing = 0
         layout.itemSize = CGSize(width: self.view.frame.width, height: collectionView1.frame.size.height)
         collectionView1.collectionViewLayout = layout
-        
         collectionView1.isPagingEnabled = true
         collectionView1.showsHorizontalScrollIndicator = false
         
         collectionView1.register(UINib(nibName: ImageViewLargeCollectionViewCell.indentifier, bundle: .main), forCellWithReuseIdentifier: ImageViewLargeCollectionViewCell.indentifier)
-        
         collectionView1.dataSource = self
         collectionView1.delegate = self
         collectionView1.isUserInteractionEnabled =  true
         collectionView1.allowsSelection = true
     }
-    
-    
     
 }
 extension DetailImageViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -83,13 +78,12 @@ extension DetailImageViewController: UICollectionViewDelegate, UICollectionViewD
             cell.bindingImage(image ?? UIImage())
         })
         cell.onChangeState = {[weak self] check in
-            // UIView.animate(withDuration: 0.5) { [weak self] in
             self?.collectionView1.isScrollEnabled = !check
             self?.collectionView2.isHidden = check
-            //}
         }
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView2 == collectionView {
             collectionView1.scrollToItem(at: indexPath, at: .top, animated: false)
@@ -98,12 +92,12 @@ extension DetailImageViewController: UICollectionViewDelegate, UICollectionViewD
             self.collectionView2.reloadItems(at: [IndexPath(item: itemSelectedIndex, section: 0),IndexPath(item: index, section: 0)])
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if collectionView1 == collectionView {
             let index = itemSelectedIndex
             itemSelectedIndex = indexPath.item
             self.collectionView2.reloadItems(at: [IndexPath(item: itemSelectedIndex, section: 0),IndexPath(item: index, section: 0)])
-            
             collectionView2.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
     }
@@ -115,5 +109,4 @@ extension DetailImageViewController: UICollectionViewDelegate, UICollectionViewD
             return CGSize(width: widthImageNho, height: collectionView2.frame.size.height)
         }
     }
-    
 }

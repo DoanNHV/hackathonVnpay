@@ -17,12 +17,10 @@ class LibPhotoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var countLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         viewNumber.layer.cornerRadius = 10
     }
     
     func setImage(image: UIImage, isCheck: Bool, count: Int) {
-       
         imageView.image = image
         if isCheck {
             countLabel.text = String(count)

@@ -1,5 +1,5 @@
 //
-//  OptionAddPhotoPopup.swift
+//  ListImageAlbums.swift
 //  CoopBank
 //
 //  Created by pc on 29/07/2023.
@@ -9,7 +9,7 @@
 import Photos
 import UIKit
 
-class OptionAddPhotoPopup: UIViewController {
+class ListImageAlbums: UIViewController {
     private var allPhotos = PHFetchResult<PHAsset>()
     private var assetArray: [PhotoLocal] = []
     private var listIndexPathSelected = [IndexPath]()
@@ -53,19 +53,9 @@ class OptionAddPhotoPopup: UIViewController {
         allPhotos.enumerateObjects { [weak self] asset, _, _ in
             self?.assetArray.append(.init(phaset: asset))
         }
-
         collectionView.reloadData()
     }
-
-    init() {
-        super.init(nibName: "OptionAddPhotoPopup", bundle: nil)
-    }
-
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
+    
     @IBAction func actionSend(_ sender: Any) {
         if !getListImageSelected().isEmpty {
             let detailController = DetailImageViewController()
@@ -79,7 +69,7 @@ class OptionAddPhotoPopup: UIViewController {
     }
 }
 
-extension OptionAddPhotoPopup: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ListImageAlbums: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueCell(LibPhotoCollectionViewCell.self, at: indexPath)
         let asset = assetArray[indexPath.item]

@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "checkPhotoLibraryAuthorization()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -127,6 +127,21 @@
                   startingLineNumber = "31"
                   endingLineNumber = "31"
                   offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "9BE3BD29-8B74-4837-8E1E-0E46821818AF - d1fde3afc719c66b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.PHAuthorizationStatus) -&gt; () in HackathonVnpay.ViewController.checkPhotoLibraryAuthorization() -&gt; ()"
+                  moduleName = "HackathonVnpay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doannh/Downloads/DOAN-VNPAY/Project/hackathonVnpay/HackathonVnpay/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "456">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -239,8 +254,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
             endingLineNumber = "45"
-            landmarkName = "checkPhotoLibraryAuthorization()"
-            landmarkType = "7">
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -425,9 +440,9 @@
             filePath = "HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "OptionAddPhotoPopup"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "ListImageAlbums"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
@@ -441,8 +456,8 @@
             filePath = "HackathonVnpay/DetailImage/DetailImageViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -457,8 +472,8 @@
             filePath = "HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -473,8 +488,8 @@
             filePath = "HackathonVnpay/PopupShowPhoto/OptionAddPhotoPopup.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
